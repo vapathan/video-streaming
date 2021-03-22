@@ -22,8 +22,10 @@
 <h1>Video.js Example Embed</h1>
 
 <video-js id="my_video_1" class="vjs-default-skin" controls preload="auto" width="640" height="268">
-    <source src="http://localhost/video-streaming/public/media/hls-stream.m3u8" type="application/x-mpegURL">
+    <source src="http://localhost/video-streaming/public/videos/media/1616409400_dab242b0b19a8f3b9b88.m3u8" type="application/x-mpegURL">
 </video-js>
+
+
 
 <script src="https://unpkg.com/video.js/dist/video.js"></script>
 <script src="https://unpkg.com/@videojs/http-streaming/dist/videojs-http-streaming.js"></script>
