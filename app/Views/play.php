@@ -22,7 +22,7 @@
 <h1>Video.js Example Embed</h1>
 
 <video-js id="my_video_1" class="vjs-default-skin" controls preload="auto" width="640" height="268">
-    <source src="http://localhost/video-streaming/public/videos/media/1616409400_dab242b0b19a8f3b9b88.m3u8" type="application/x-mpegURL">
+
 </video-js>
 
 
@@ -31,7 +31,13 @@
 <script src="https://unpkg.com/@videojs/http-streaming/dist/videojs-http-streaming.js"></script>
 
 <script>
-    var player = videojs('my_video_1');
+
+    var player = videojs('my_video_1',{
+        sources: [{
+            src: 'https://streaming.matoshri.edu.in/media/videos/1616492537_8c1a67f040f62ec82a38.m3u8',
+            type:'application/x-mpegURL'
+        }]
+    });
 </script>
 
 </body>
