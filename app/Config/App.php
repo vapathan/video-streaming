@@ -23,7 +23,7 @@ class App extends BaseConfig
 	 *
 	 * @var string
 	 */
-	public $baseURL = 'http://localhost/video-streaming/';
+	public $baseURL = 'https://streaming.matoshri.edu.in/';
 
 	/**
 	 * --------------------------------------------------------------------------

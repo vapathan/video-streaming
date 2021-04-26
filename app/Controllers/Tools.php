@@ -4,27 +4,32 @@
 namespace App\Controllers;
 
 
-use CodeIgniter\Controller;
 
-class Tools extends Controller
+class Tools extends BaseController
 {
 
+    public function index()
+    {
+        $client = \Config\Services::curlrequest();
+
+        $response = $client->request('GET', 'http://localhost/video-streaming/tools/message/123', [
+        ]);
+
+        print_r($response->getBody());
+    }
 
     public function message($to = 'World')
     {
-        echo "Hello {$to}!" . PHP_EOL;
+        $output=null;
+        $retval=null;
+        exec('php index.php tools hello Ram', $output, $retval);
+        echo "Returned with status $retval and output:\n";
+        print_r($output);
     }
 
-    public function updateAge()
-    {
-        // is_cli_request() is provided by default input library of codeigniter
-        if($this->request->isCLI())
-        {
-            $this->cron_model->updateAge();
-        }
-        else
-        {
-            echo "You dont have access";
-        }
+
+    public function hello($name){
+        echo "Hello ". $name;
     }
+
 }

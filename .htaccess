@@ -46,3 +46,15 @@ Options All -Indexes
 # Disable server signature start
     ServerSignature Off
 # Disable server signature end
+
+
+<IfModule mod_headers.c>
+  	Header set Access-Control-Allow-Origin "https://learning.matoshri.edu.in"
+</IfModule>
+
+php_value upload_max_filesize 600M
+php_value post_max_size 600M
+php_value max_execution_time 3600000
+php_value max_input_time 100000
+php_value memory_limit 512M
+

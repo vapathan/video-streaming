@@ -34,8 +34,15 @@ $routes->setAutoRoute(true);
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
 $routes->get('play', 'Home::play');
-$routes->add('upload', 'Home::upload');
-
+$routes->post('get-video', 'Home::getVideo');
+$routes->post('get-video-status', 'Home::getVideoStatus');
+$routes->post('delete-video', 'Home::deleteVideo');
+$routes->add('upload-video', 'Home::upload');
+$routes->cli('save/(:segment)', 'Home::save/$1');
+$routes->add('msg/(:segment)', 'Home::message/$1');
+$routes->add('tools', 'Tools::index');
+$routes->add('tools/message/(:segment)', 'Tools::message/$1');
+$routes->cli('tools/hello/(:segment)', 'Tools::hello/$1');
 /*
  * --------------------------------------------------------------------
  * Additional Routing
